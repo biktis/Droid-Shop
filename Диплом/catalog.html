@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/catalog.css">
+	<link rel="stylesheet" href="style/slider.css">
+	<link rel="stylesheet" href="libl/nouislider.min.css">
+
+	<title>Catalog</title>
+</head>
+<body>
+	<nav>
+		<div class="left">
+			
+			<a href="first.html" class="logo">Droid Shop</a>
+
+		</div>
+			<ul>
+				<li><a href="contact.html">Контакты</a>
+				<li><a href="#">Каталог</a>
+					<ul>
+						<li><a href="#">Зарядные устройства</a></li>
+						<li><a href="#">Чехлы</a></li>
+						<li><a href="#">Защитные стекла</a></li>
+					</ul>
+				</li>
+				<li><a href="first.html">Главная</a>
+				
+				
+			</ul>
+		</nav>
+		<div class="catalog">
+			
+		
+	<div class="filter">
+		<div class="item">
+			<div class="content">
+				<div class="l"  id='tovar'><span>&lsaquo;</span></div>
+				<div class="l"  >Категория товара</div>
+			</div>
+			 <div class="category"  >
+		    	<ul>
+		    		<li> <input type="checkbox" id="mobile"> <label for="mobile">Мобильные чехлы</label></li>
+		    		<li> <input type="checkbox" id="steklo"> <label for="steklo">Защитные стекла</label></li>
+		    		<li> <input type="checkbox" id="power"> <label for="power">Адаптеры для зарядки</label></li>
+		    		<li> <input type="checkbox" id="f"> <label for="f">Чехлы для наушников</label></li>
+		    		<li> <input type="checkbox" id="port"> <label for="port">Power bank</label></li>
+		    		<li> <input type="checkbox" id="cabel"> <label for="cabel">Кабель</label></li>
+		    	</ul>
+		    </div>
+
+		</div>
+		<div class="item">
+			<div class="content">
+				<div class="l" id='tovar2'><span>&lsaquo;</span></div>
+				
+				<div class="l">Цена</div>
+				</div>
+				<div class="category">
+			
+				<div class="filters-price_slider" id="range-slider"></div>
+				<div class="filters-price_inputs">
+
+					<label class="filters-price_label">
+						<span class="filters-price_text">от</span>
+						<input type="number" min="500" max="9999" class="filters-price_input" id="input-1">
+						<span class="filters-price_text">&#8381;</span>
+					</label>
+					<label class="filters-price_label">
+						<span class="filters-price_text">до</span>
+						<input type="number"  min="500" max="9999" class="filters-price_input" id="input-2">
+						<span class="filters-price_text">&#8381;</span>
+					</label>
+				</div>
+			</div>
+			
+			
+
+		</div>
+		<div class="item">
+			<div class="content">
+				<div class="l" ><span >&lsaquo;</span></div>
+				<div class="l" >Цвет</div>
+			</div>
+			
+
+		</div>
+		<div class="item">
+			<div class="content">
+				<div class="l"><span>&lsaquo;</span></div>
+				<div class="l">тула</div>
+			</div>
+			
+
+		</div>
+		<div class="item">
+			<div class="content">
+				<div class="l"><span>&lsaquo;</span></div>
+				<div class="l">сюда</div>
+			</div>
+			
+
+		</div>
+
+	</div>
+	<div class="osn">
+		
+	
+	<div class="osnovnoe">
+		<div class="cartochka">1</div>
+		<div class="cartochka">2</div>
+		<div class="cartochka">3</div>
+		<div class="cartochka">1</div>
+		<div class="cartochka">2</div>
+		<div class="cartochka">3</div>
+		<div class="cartochka">1</div>
+		<div class="cartochka">2</div>
+		<div class="cartochka">3</div>
+		<div class="cartochka">1</div>
+		<div class="cartochka">2</div>
+		<div class="cartochka">3</div>
+		<div class="cartochka">1</div>
+		<div class="cartochka">2</div>
+		<div class="cartochka">3</div>
+		<div class="cartochka">1</div>
+		<div class="cartochka">2</div>
+		<div class="cartochka">3</div>
+	</div>
+	<div class="dop">
+		<button class="btn">показать еще 3 товара</button>
+	</div>
+	</div>
+
+	</div>
+		<script>
+
+		const tovar=document.getElementById('tovar');
+		tovar.addEventListener('click', function(e){
+			tovar.classList.toggle('active');
+
+		});
+		const tovar2=document.getElementById('tovar2');
+		tovar2.addEventListener('click', function(e){
+			tovar2.classList.toggle('active');
+
+		});
+
+		
+		</script>
+		
+		<script src="libl/nouislider.min.js"> </script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+		<script src="libl/slider.js"> </script>
+		<script>
+			$(".cartochka").slice(0, 3).show();
+			$(".btn").on("click",function(){
+				$(".cartochka:hidden").slice(0, 3).slideDown()
+			})
+		</script>
+</body>
+</html>
